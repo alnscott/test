@@ -1,0 +1,1 @@
+((Get-Job -State Completed | % { Receive-Job $_.Id; Remove-Job $_.Id }) | Measure-Object 'Column1' -Sum).Sum
